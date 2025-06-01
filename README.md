@@ -1,42 +1,152 @@
-# Crop Recommendation System Using Machine Learning
-# Description
-The Crop Recommendation System is a machine learning-based application that provides recommendations for suitable crops based on various environmental and soil conditions. It aims to assist farmers and agricultural professionals in making informed decisions about crop selection, optimizing yields, and maximizing profitability.
+Crop Recommendation System
 
-The system takes into account several factors such as soil type, climate, rainfall, temperature, humidity, and pH levels to determine the most suitable crops for a given region. By analyzing historical data and using predictive models, the system provides personalized recommendations tailored to the specific conditions of a farm or agricultural area.
+This project is a web-based Crop Recommendation System built using Flask, designed to assist farmers and agricultural enthusiasts in making informed decisions about crop cultivation. It recommends the most suitable crops based on specific environmental and soil conditions and provides detailed information about ideal growing conditions for various crops.
 
-# Key Features
-Input Data Collection: The system allows users to input relevant data such as soil parameters, climate information, and geographic location.
-Data Preprocessing: The input data is preprocessed to handle missing values, normalize or scale features, and transform categorical variables.
-Machine Learning Models: Various machine learning algorithms are employed, including decision trees, random forests, support vector machines (SVM), and gradient boosting techniques, to build predictive models.
-Model Training and Evaluation: The models are trained on historical data and evaluated using appropriate performance metrics to ensure accuracy and reliability.
-Crop Recommendation: Based on the trained models, the system recommends the most suitable crops for the given input parameters.
-User-Friendly Interface: The system provides a user-friendly interface where users can easily input their data, view recommendations, and explore additional information.
+Table of Contents
 
-# Technologies Used
-Python: Programming language used for model development, data preprocessing, and web application development.
-Scikit-learn: Machine learning library used for model training, evaluation, and prediction.
-Pandas: Data manipulation library used for data preprocessing and analysis.
-NumPy: Library for numerical computing used for handling arrays and mathematical operations.
-Flask: Web framework used for building the user interface and handling HTTP requests.
-HTML/CSS: Markup and styling languages used for designing the web interface.
-JavaScript: Scripting language used for client-side interactions and enhancing the user interface.
-# Installation and Usage
-Clone the repository: git clone https://github.com/your-username/crop-recommendation-system.git
-Install the required dependencies: pip install -r requirements.txt
-Run the application: python app.py
-Access the application through the web browser at http://localhost:5000
-# Future Enhancements
-Integration of real-time weather data to improve the accuracy of recommendations.
-Incorporation of crop market prices and profitability analysis to assist farmers in making economically viable decisions.
-Development of a mobile application for convenient access and usage on smartphones and tablets.
-Integration of user feedback and data collection to continuously enhance the recommendation system's performance.
-Contributing
-Contributions to the project are welcome. If you have any suggestions, bug reports, or feature requests, please submit them through the issue tracker on the GitHub repository.
+Features
+
+Project Structure
+
+Setup and Installation
+
+Usage
+
+Technologies Used
+
+Team Members
+
+License
+
+Features
+
+Crop Prediction: Users can input soil nutrient levels (Nitrogen, Phosphorus, Potassium), temperature, humidity, pH value, and rainfall to get a recommendation for the best crop to cultivate.
+
+Crop Information Lookup: Users can select a specific crop from a dropdown menu to view its ideal growing conditions (N, P, K, Temperature, Humidity, pH, Rainfall ranges).
+
+Intuitive User Interface: A clean and responsive design built with Bootstrap 5 and Font Awesome for a user-friendly experience.
+
+Navigation: Dedicated pages for Home, Contact, and About sections.
+
+Team Contact Information: A contact page listing team members with their USN and email.
+
+Project Gallery: A visual gallery showcasing aspects of the project's work on the contact page.
+
+Project Structure
+
+your_project_folder/
+├── app.py                  # Flask application backend
+├── templates/
+│   ├── index.html          # Home page with crop prediction and info lookup
+│   ├── contact.html        # Contact page with team details and image gallery
+│   └── about.html          # About page with project description
+├── static/                 # Directory for static files (images, CSS, JS)
+│   ├── girl1.jpeg          # Team member image
+│   ├── girl2.jpeg          # Team member image
+│   ├── girl3.jpeg          # Team member image
+│   ├── girl4.jpeg          # Team member image
+│   ├── pic1.jpeg           # Project/team image
+│   ├── pic2.jpeg           # Project/team image
+│   ├── pic3.jpeg           # Project/team image
+│   ├── pic4.jpeg           # Project/team image
+│   ├── pic5.jpeg           # Project/team image
+│   ├── pic6.jpeg           # Project/team image
+│   └── img.jpg             # Placeholder image for prediction result card
+├── model.pkl               # Trained machine learning model (pickle file)
+├── standscaler.pkl         # Standard Scaler for feature scaling (pickle file)
+└── minmaxscaler.pkl        # Min-Max Scaler for feature scaling (pickle file)
 
 
+Setup and Installation
 
-# Acknowledgements
-We would like to express our gratitude to the agricultural research community, farmers, and organizations for providing valuable insights, data, and domain knowledge that contributed to the development of this Crop Recommendation System.
+To run this project locally, follow these steps:
 
-# Contact
-For any inquiries or questions, please contact us at 611noorsaeed@gmail.com
+Clone the repository:
+
+git clone <your-repository-url>
+cd crop-recommendation-system
+
+
+Create a virtual environment (recommended):
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+
+Install dependencies:
+
+pip install Flask numpy pandas scikit-learn
+
+
+Note: Ensure you have model.pkl, standscaler.pkl, and minmaxscaler.pkl files in your project's root directory. These are your trained model and scalers.
+
+Place HTML templates:
+Make sure index.html, contact.html, and about.html are inside a folder named templates in your project root.
+
+Place static files:
+Ensure all image files (girl*.jpeg, pic*.jpeg, img.jpg) are placed inside a folder named static in your project root.
+
+Run the Flask application:
+
+python app.py
+
+
+Usage
+
+Once the Flask application is running, open your web browser and navigate to http://127.0.0.1:5000/.
+
+Home Page:
+
+Enter the required environmental and soil parameters (Nitrogen, Phosphorus, Potassium, Temperature, Humidity, pH, Rainfall) and click "Get Recommendation" to see the suggested crop.
+
+Use the "Explore Crop Ideal Conditions" section to select a crop from the dropdown and view its optimal growing parameters.
+
+Contact Page:
+
+Find contact details for the team members involved in the project.
+
+View a gallery of images related to the project's work.
+
+About Page:
+
+Learn more about the purpose, functionality, and mission of the Crop Recommendation System.
+
+Technologies Used
+
+Backend: Python, Flask
+
+Machine Learning: NumPy, Pandas, Scikit-learn (for model and scalers)
+
+Frontend: HTML5, CSS3, Bootstrap 5, Font Awesome
+
+Templating: Jinja2 (integrated with Flask)
+
+Team Members
+
+Sarah Smyrline R
+
+USN: 1AT22IS095
+
+Email: sarahsmyrlinework@gmail.com
+
+Shafiya Noorain
+
+USN: 1AT22IS097
+
+Email: shafiyanoorain@gmail.com
+
+Zoya Harmain
+
+USN: 1AT22IS126
+
+Email: zoyaharmain@gmail.com
+
+Tamirah Sharieff
+
+USN: 1AT22IS113
+
+Email: tamirah@example.com
+
+License
+
+This project is open-source and available under the MIT License.
