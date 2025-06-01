@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us - Crop Recommendation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+        background: linear-gradient(to right, #e0ffe0, #c0e0c0); /* Lighter, subtle green gradient */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .navbar {
+        background-color: #28a745 !important; /* Darker green for navbar */
+      }
+      .navbar-brand, .nav-link {
+        color: white !important;
+      }
+      .navbar-brand:hover, .nav-link:hover {
+        color: #d4edda !important; /* Lighter hover color */
+      }
+      .container {
+        background: #ffffff; /* White background for the form container */
+        font-weight: normal;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        margin-top: 40px;
+        margin-bottom: 40px; /* Added margin-bottom for overall spacing */
+      }
+      h1 {
+        color: #28a745; /* Bootstrap success green */
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 600;
+      }
+      .team-member-card {
+        background-color: #f8f9fa; /* Light grey background for cards */
+        border: 1px solid #e9ecef;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        text-align: center; /* Center content within the card */
+      }
+      .team-member-card:hover {
+        transform: translateY(-5px);
+      }
+      .team-member-card img { /* Style for team member images */
+        width: 120px; /* Fixed width for circular images */
+        height: 120px; /* Fixed height for circular images */
+        border-radius: 50%; /* Make images circular */
+        object-fit: cover;
+        margin: 0 auto 15px auto; /* Center and add margin below */
+        border: 3px solid #28a745; /* Green border around image */
+      }
+      .team-member-card h5 {
+        color: #28a745;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .team-member-card p {
+        margin-bottom: 5px;
+        color: #555;
+      }
+      .team-member-card p strong {
+        color: #333;
+      }
+      .image-gallery-section {
+        margin-top: 50px; /* Spacing from the contact cards */
+      }
+      .image-gallery-section h2 {
+        color: #28a745;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 600;
+      }
+      .gallery-item {
+        border-radius: 10px;
+        overflow: hidden; /* Ensures rounded corners apply to image */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Space between image cards */
+        transition: transform 0.3s ease;
+      }
+      .gallery-item:hover {
+        transform: scale(1.03); /* Slightly enlarge on hover */
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 200px; /* Fixed height for consistency */
+        object-fit: cover; /* Ensures images cover the area without distortion */
+        display: block;
+      }
+      .gallery-item-caption {
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.95rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><i class="fas fa-seedling me-2"></i>Crop Recommendation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('index') }}"><i class="fas fa-home me-1"></i>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('contact') }}"><i class="fas fa-envelope me-1"></i>Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}"><i class="fas fa-info-circle me-1"></i>About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-3 mt-3">
+      <h1>Contact Our Team <span class="text-success">📞</span></h1>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="team-member-card">
+            <img src="{{ url_for('static', filename='girl1.jpeg') }}" alt="Sarah Smyrline R">
+            <h5>Sarah Smyrline R</h5>
+            <p><strong>USN:</strong> 1AT22IS095</p>
+            <p><strong>Email:</strong> sarahsmyrlinework@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="team-member-card">
+            <img src="{{ url_for('static', filename='girl2.jpeg') }}" alt="Shafiya Noorain">
+            <h5>Shafiya Noorain</h5>
+            <p><strong>USN:</strong> 1AT22IS097</p>
+            <p><strong>Email:</strong> shafiyanoorain@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="team-member-card">
+            <img src="{{ url_for('static', filename='girl3.jpeg') }}" alt="Zoya Harmain">
+            <h5>Zoya Harmain</h5>
+            <p><strong>USN:</strong> 1AT22IS126</p>
+            <p><strong>Email:</strong> zoyaharmain@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="team-member-card">
+            <img src="{{ url_for('static', filename='girl4.jpeg') }}" alt="Tamirah Sharieff">
+            <h5>Tamirah Sharieff</h5>
+            <p><strong>USN:</strong> 1AT22IS113</p>
+            <p><strong>Email:</strong> tamirah@example.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="text-muted">For general inquiries, please reach out to any of the team members listed above.</p>
+        </div>
+      </div>
+
+      <hr class="my-5"> 
+      <div class="image-gallery-section">
+        <h2>Our Work in Pictures <span class="text-success">📸</span></h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img src="{{ url_for('static', filename='pic1.jpeg') }}" alt="Project Image 1">
+              <div class="gallery-item-caption">Field monitoring</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img src="{{ url_for('static', filename='pic2.jpeg') }}" alt="Project Image 2">
+              <div class="gallery-item-caption">Soil analysis</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img src="{{ url_for('static', filename='pic3.jpeg') }}" alt="Image 3">
+              <div class="gallery-item-caption">Crop harvesting</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img src="{{ url_for('static', filename='pic4.jpeg') }}" alt="Image 4">
+              <div class="gallery-item-caption">Data processing</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img src="{{ url_for('static', filename='pic5.jpeg') }}" alt="Image 5">
+              <div class="gallery-item-caption">Farmer consultation</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item">
+              <img src="{{ url_for('static', filename='pic6.jpeg') }}" alt="Image 6">
+              <div class="gallery-item-caption">System development</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
